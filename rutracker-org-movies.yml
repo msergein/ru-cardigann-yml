@@ -35,7 +35,7 @@ settings:
   - name: format
     type: info
     label: format
-    default: "The preset formats are compatible with Sonarr and Radarr. You can use custom formats like this '<#prefix#${value}#suffix#>', where '${value}' - parsed values of title, year, etc. You can use: 'title', 'alt_title', 's', 'e_from', 'e_to', 'year' or just 'all' if you don't want to change anything. If value is empty, the entire tag is ignored"
+    default: "The preset formats are compatible with Sonarr and Radarr. You can use custom formats like this '<#prefix#${value}#suffix#>', where '${value}' - parsed values of title, year, etc. You can use: 'title', 'alt_title', 's', 'e_from', 'e_to', 'year'. If value is empty, the entire tag is ignored"
   - name: format-default
     type: text
     label: default format
@@ -95,7 +95,7 @@ search:
       filters:
         - name: re_replace
           args: 
-            - '(?<all>^(((?<alt_title>.[^\/\(]*)\s?\/\s?)?(?<title>(?!\s*(Серии|Сезон))[^\/\(]+))(([\/\(]\s*Сезон\:\s*(?<s>\d{1,2})[^\/\)])?([\/\(]\s*Серии\:\s*(?<e_from>\d{1,3})\s*-(?<e_to>\d{1,3})\s+из\s+\d{1,3})[^\/\)])?(?<info>([^\(])*)(\((?<director_rus>[^\/\)]+)(\/(?<director_eng>[^)]+))?\))?[^\[]\[(?<year>\d{4}(\s*-\s*\d{4})?)[\s,]*)'
+            - '(?<all>^(((?<alt_title>.[^\/\(]*)\s?\/\s?)?\s*(?<title>(?!(\s*Серии|\s*Сезон))[^\/\(]+))(([\/\(]\s*Сезон\:\s*(?<s>\d{1,2}(-\d{1,2})?)[^\/\)])?([\/\(]\s*Серии\:\s*(?<e_from>\d{1,3})\s*-(?<e_to>\d{1,3})\s+(из\s+\d{1,3}|\(\d{1,2}\)))[^\/\)])?(?<info>([^\(])*)(\((?<director_rus>[^\/\)]+)(\/(?<director_eng>[^)]+))?\))?[^\[]\[(?<year>\d{4}(\s*-\s*\d{4})?)[\s,]*)'
             - '{{ if eq .Query.Type "tvsearch" }}{{ .Config.format-tv }}{{ else }}{{ end }}{{ if eq .Query.Type "movie" }}{{ .Config.format-movie }}{{ else }}{{ end }}{{ if eq .Query.Type "search" }}{{ .Config.format-default }}{{ else }}{{ end }}'
 
         # удаление пустых тегов '<#s###>' => ''
