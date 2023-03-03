@@ -1,9 +1,13 @@
 # ru-cardigann-yml
 
 описание торрент-трекера [rutracker.org](https://rutracker.org/) в формате [Prowlarr Cardigann YML](https://wiki.servarr.com/prowlarr/cardigann-yml-definition). Данный формат используется в программах-индексаторах торрент-трекеров таких как [Сardigann](https://github.com/cardigann/cardigann), [Prowlarr](https://github.com/Prowlarr/Prowlarr), [Jackett](https://github.com/Jackett/Jackett).
-Название раздач переформатируются, в формат понимаемый приложениями для автоматического скачивания раздач: [Radarr](https://github.com/Radarr/Radarr) (скачивание фильмов) и [Sonarr](https://github.com/Sonarr/Sonarr) (скачивание сериалов).
+Название раздач переформатируются в формат понимаемый приложениями для автоматического скачивания раздач: [Radarr](https://github.com/Radarr/Radarr) (скачивание фильмов) и [Sonarr](https://github.com/Sonarr/Sonarr) (скачивание сериалов). В оличии от настройки `Strip Russian letters` которая обычно используется в индексерах, данный конфиг позволяет искать также русские фильмы и сериалы с названием на кириллице.
 
-## Примеры
+## Установка в Prowlarr
+
+читайте [здесь](https://wiki.servarr.com/prowlarr/indexers#adding-a-custom-yml-definition)
+
+## Примеры форматирования
 
 ### Фильмы
 
