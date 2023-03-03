@@ -5,7 +5,7 @@
 
 ## Установка в Prowlarr
 
-Скачайте файл `rutracker-org-movies.yml` по [ссылке](https://raw.githubusercontent.com/msergein/ru-cardigann-yml/main/rutracker-org-movies.yml) или склонируйте репозиторий и скопируйте файл в папку `Definitions/Custom` как описано [здесь](https://wiki.servarr.com/prowlarr/indexers#adding-a-custom-yml-definition)
+Скачайте файл `rutracker-org-movies.yml` по [ссылке](https://raw.githubusercontent.com/msergein/ru-cardigann-yml/main/rutracker-org-movies.yml) или склонируйте репозиторий, затем скопируйте файл в папку `Definitions/Custom` как описано [здесь](https://wiki.servarr.com/prowlarr/indexers#adding-a-custom-yml-definition)
 
 ## Примеры форматирования
 
